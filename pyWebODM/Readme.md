@@ -24,3 +24,6 @@ for project in /path/to/my/session* ;
   do python process_webodm.py ${project}/DCIM/ ;
 done
 ```
+
+
+Forked and modified from (WebODM/slate/examples/process_images.py)[https://github.com/OpenDroneMap/WebODM/blob/master/slate/examples/process_images.py]
