@@ -72,7 +72,7 @@ if 'token' in res:
         task_id = res['id']
         
         # Change task name to folder name: same as project name
-        requests.patch('https://opendronemap.ird.fr/api/projects/{}/tasks/{}/'.format(project_id, task_id),
+        requests.patch(settings.SERVER + '/api/projects/{}/tasks/{}/'.format(project_id, task_id),
                         headers={'Authorization': 'JWT {}'.format(token)},
                         data={'name': input }).json()
 
