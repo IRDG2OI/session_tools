@@ -21,14 +21,18 @@ input = path.split(os.sep)[-2]
 # List images files (png for masks)
 types = ("*.jpg", "*.jpeg", "*.JPG", "*.JPEG", "*.png", "*.PNG")
 images_list = []
+images_list2 = []
 for t in types:
     images_list.extend(glob.glob(os.path.join(sys.argv[1], t)))
+    images_list2.extend(glob.glob(os.path.join(sys.argv[2], t)))
 
-if len(images_list) < 2:
+if len(images_list) < 1:
     print("Need at least 2 images")
     sys.exit(1)
 else:
-    print("Found {} images".format(len(images_list)))
+    print("Found {} images".format(len(images_list))
+    + " and {} images".format(len(images_list2))
+    )
 
 res = requests.post(settings.SERVER + '/api/token-auth/', 
                     data={'username': settings.USERNAME,
@@ -45,7 +49,9 @@ if 'token' in res:
         print("Created project: {}".format(res)) 
         project_id = res['id']
 
-        images = [('images', (os.path.basename(file), open(file, 'rb'), 'image/jpg')) for file in images_list]
+        im1 = [('images', (os.path.basename(file), open(file, 'rb'), 'image/jpg')) for file in images_list]
+        im2 = [('images', (os.path.basename(file), open(file, 'rb'), 'image/jpg')) for file in images_list2]
+        images = im1 + im2
         options = json.dumps([
             {'name': "orthophoto-resolution", 'value': 1},
             {'name': "auto-boundary", 'value': True},
