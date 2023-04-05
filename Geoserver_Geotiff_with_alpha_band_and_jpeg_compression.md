@@ -13,7 +13,7 @@ gdal_translate -co COMPRESS=JPEG -co JPEG_QUALITY=75 -b 1 -b 2 -b 3 -mask 4 -co 
 ```
 
 ### References:
-- https://app.element.io/#/room/#geoserver_geoserver:gitter.im/$pgM7xx7WRPCE5GNqfGGG2Yits3IF-yT7ajhDRXtpncM
+- https://matrix.to/#/!eRmmLjsPElFqHofPCc:gitter.im/$mi0z4UDau4p6UfKjj5i85UMkCuk8kRBJ65C4-XsK30s?via=gitter.im&via=matrix.org&via=hive-mind.network
 - https://gis.stackexchange.com/questions/361277/geoserver-fails-to-read-a-jpeg-compressed-tiff-with-alpha-band
 
 ---
