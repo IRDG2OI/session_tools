@@ -56,7 +56,7 @@ if 'token' in res:
             {'name': "dsm", 'value': True},
             {'name': "ignore-gsd", 'value': True},
             {"name": "pc-quality", "value": 'high'},
-            {'name': "resize_to", 'value': 2048},
+            # {'name': "resize_to", 'value': 2048},
             {'name': "rolling-shutter", 'value': True},
             {'name': "rolling-shutter-readout", 'value': 56},
             {'name': "use-fixed-camera-params", 'value': True}
