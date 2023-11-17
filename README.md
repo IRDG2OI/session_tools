@@ -1,3 +1,13 @@
+# ACKNOWLEDGEMENT
+
+This project is being developed as part of the G2OI project, cofinanced by the European Union, the Reunion region, and the French Republic.
+<div align="center">
+
+
+<img src="https://github.com/IRDG2OI/geoflow-g2oi/blob/main/img/logos_partenaires.png?raw=True" height="80px">
+
+</div>
+
 # Session tools
 Some tools to quickly enhance mission preparation or analysis
 
